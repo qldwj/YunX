@@ -8,11 +8,11 @@ plugins {
 }
 
 android {
-    namespace = "com.yunx.app"
+    namespace = "com.yunjx.app"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "com.yunx.app"
+        applicationId = "com.yunjx.app"
         minSdk = 23
         targetSdk = 34
         versionCode = 10
@@ -56,6 +56,7 @@ dependencies {
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.8.7")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("io.coil-kt:coil-compose:2.5.0")  // Coil for loading images (QQ avatar)
     implementation(libs.material)   // 原 libs.material.color.utilities -> 改为官方 Material 主库（含 color.utilities 包）
 
     implementation(libs.room.runtime)

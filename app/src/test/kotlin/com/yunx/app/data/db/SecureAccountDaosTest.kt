@@ -1,6 +1,6 @@
-package com.yunx.app.data.db
+package com.yunjx.app.data.db
 
-import com.yunx.app.data.security.CredentialCipher
+import com.yunjx.app.data.security.CredentialCipher
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.runBlocking

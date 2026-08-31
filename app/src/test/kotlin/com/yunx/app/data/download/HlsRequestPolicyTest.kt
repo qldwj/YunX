@@ -1,4 +1,4 @@
-package com.yunx.app.data.download
+package com.yunjx.app.data.download
 
 import okhttp3.HttpUrl.Companion.toHttpUrl
 import org.junit.Assert.assertEquals

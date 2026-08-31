@@ -1,4 +1,4 @@
-package com.yunx.app.data.network
+package com.yunjx.app.data.network
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertNull

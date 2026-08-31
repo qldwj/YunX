@@ -1,4 +1,4 @@
-package com.yunx.app.util
+package com.yunjx.app.util
 
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
