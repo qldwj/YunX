@@ -94,7 +94,7 @@ fun CloudDriveScreen(
     val listState = rememberLazyListState()
     // 批量操作弹窗（多选模式底部栏触发：分享/移动需要设置或选目录，下载/删除直接执行）
     var showBatchActions by remember { mutableStateOf(false) }
-    var batchInitial by remember { mutableStateOf(com.yunx.app.ui.screens.BatchStep.MENU) }
+    var batchInitial by remember { mutableStateOf(com.yunjx.app.ui.screens.BatchStep.MENU) }
     // 批量删除二次确认
     var showDeleteConfirm by remember { mutableStateOf(false) }
 
@@ -311,11 +311,11 @@ fun CloudDriveScreen(
                                 viewModel.downloadSelected()
                             },
                             MultiSelectAction("分享", Icons.Outlined.Share, MaterialTheme.colorScheme.primary) {
-                                batchInitial = com.yunx.app.ui.screens.BatchStep.SHARE
+                                batchInitial = com.yunjx.app.ui.screens.BatchStep.SHARE
                                 showBatchActions = true
                             },
                             MultiSelectAction("移动", Icons.Outlined.DriveFileMove, MaterialTheme.colorScheme.primary) {
-                                batchInitial = com.yunx.app.ui.screens.BatchStep.MOVE
+                                batchInitial = com.yunjx.app.ui.screens.BatchStep.MOVE
                                 showBatchActions = true
                             },
                             MultiSelectAction("删除", Icons.Outlined.Delete, MaterialTheme.colorScheme.error) {

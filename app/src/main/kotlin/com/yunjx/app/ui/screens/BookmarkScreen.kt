@@ -207,7 +207,7 @@ fun BookmarkScreen(
             onCopy = {
                 menuBookmark = null
                 copyToClipboard(context, bookmark.link)
-                com.yunx.app.ui.SnackbarController.show("链接已复制")
+                com.yunjx.app.ui.SnackbarController.show("链接已复制")
             },
             onEditCategory = {
                 menuBookmark = null

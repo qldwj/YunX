@@ -237,8 +237,8 @@ class QuarkCloudViewModel(
     /** 夸克下载直链的请求头（Cookie + 网盘 UA + 防盗链 Referer，对齐 AList quark_uc） */
     private fun downloadHeaders(cookie: String): Map<String, String> = mapOf(
         "Cookie" to cookie,
-        "User-Agent" to com.yunx.app.data.network.QuarkConstants.API_USER_AGENT,
-        "Referer" to com.yunx.app.data.network.QuarkConstants.DOWNLOAD_REFERER
+        "User-Agent" to com.yunjx.app.data.network.QuarkConstants.API_USER_AGENT,
+        "Referer" to com.yunjx.app.data.network.QuarkConstants.DOWNLOAD_REFERER
     )
 
     /**
@@ -288,7 +288,7 @@ class QuarkCloudViewModel(
                     folderProgress = "正在加入下载 ${index + 1}/${tasks.size}"
                     runCatching {
                         val link = api.getDownloadLink(file.fid, cookie) ?: return@runCatching
-                        val effectiveUrl = com.yunx.app.data.network.QuarkCdn.fastest(link.downloadUrl, cookie)
+                        val effectiveUrl = com.yunjx.app.data.network.QuarkCdn.fastest(link.downloadUrl, cookie)
                         downloadManager.enqueue(
                             url = effectiveUrl,
                             fileName = relPath, // 相对路径：Download/文件夹A/子目录/文件.mp4
@@ -337,15 +337,15 @@ class QuarkCloudViewModel(
                 val link = api.getDownloadLink(file.fid, cookie)
                     ?: throw IllegalStateException("获取下载链接失败")
                 // 直链原样使用（关闭 CDN 节点改写/探测，避免消耗直链额度与节点签名 412）
-                val effectiveUrl = com.yunx.app.data.network.QuarkCdn.fastest(link.downloadUrl, cookie)
+                val effectiveUrl = com.yunjx.app.data.network.QuarkCdn.fastest(link.downloadUrl, cookie)
                 pendingDownload = PendingDownload(
                     url = effectiveUrl,
                     fileName = link.filename.ifBlank { file.fname },
                     size = link.size,
                     headers = mapOf(
                         "Cookie" to cookie,
-                        "User-Agent" to com.yunx.app.data.network.QuarkConstants.API_USER_AGENT,
-                        "Referer" to com.yunx.app.data.network.QuarkConstants.DOWNLOAD_REFERER
+                        "User-Agent" to com.yunjx.app.data.network.QuarkConstants.API_USER_AGENT,
+                        "Referer" to com.yunjx.app.data.network.QuarkConstants.DOWNLOAD_REFERER
                     )
                 )
                 downloadLink = link // 弹下载确认弹窗（长按直链可复制）
@@ -535,7 +535,7 @@ class QuarkCloudViewModel(
                     folderProgress = "正在加入下载 ${index + 1}/${tasks.size}"
                     runCatching {
                         val link = api.getDownloadLink(file.fid, cookie) ?: return@runCatching
-                        val effectiveUrl = com.yunx.app.data.network.QuarkCdn.fastest(link.downloadUrl, cookie)
+                        val effectiveUrl = com.yunjx.app.data.network.QuarkCdn.fastest(link.downloadUrl, cookie)
                         downloadManager.enqueue(
                             url = effectiveUrl,
                             fileName = if (relPath.contains('/')) relPath else link.filename.ifBlank { relPath },

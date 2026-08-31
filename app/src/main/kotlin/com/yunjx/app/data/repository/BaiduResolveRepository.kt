@@ -46,7 +46,7 @@ class BaiduResolveRepository(private val api: BaiduApi) : ShareResolveRepository
             // 顶层 dirFid 为空/"/"；子目录 dirFid 为目录 path（如 /folder）
             val all = mutableListOf<ShareFile>()
             var page = 1
-            var result: com.yunx.app.data.network.BaiduShareList
+            var result: com.yunjx.app.data.network.BaiduShareList
             do {
                 result = api.listShare(session.shareId, sekey, dirFid, cookie, page)
                 all += result.files

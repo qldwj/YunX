@@ -1046,7 +1046,7 @@ class DownloadManager(
         }
     }
 
-    /** 下载临时文件缓存根目录：外部缓存（/storage/emulated/0/Android/data/com.yunx.app/cache），
+    /** 下载临时文件缓存根目录：外部缓存（/storage/emulated/0/Android/data/com.yunjx.app/cache），
      *  与最终保存目录解耦，系统可自动清理；外部存储不可用时回退内部缓存目录。 */
     private fun cacheBase(): File = context.externalCacheDir ?: context.cacheDir
 

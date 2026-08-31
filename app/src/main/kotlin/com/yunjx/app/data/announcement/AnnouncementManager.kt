@@ -44,7 +44,7 @@ object AnnouncementManager {
         
         // 从后端获取公告
         val announcement = BackendApi.getAnnouncement()
-        if (announcement != null && announcement.hasAnnouncement) {
+        if (announcement != null && announcement.code == 0 && announcement.title.isNotEmpty()) {
             announcement
         } else {
             null

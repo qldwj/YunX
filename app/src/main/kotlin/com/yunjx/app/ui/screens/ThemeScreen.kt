@@ -159,8 +159,8 @@ fun ThemeScreen(
     var iconExpanded by rememberSaveable { mutableStateOf(true) }
     val switchAppIcon: (Int) -> Unit = { variant ->
         val pm = context.packageManager
-        val main = ComponentName(context, "com.yunx.app.MainActivity")
-        val alias = ComponentName(context, "com.yunx.app.MainActivityIcon2")
+        val main = ComponentName(context, "com.yunjx.app.MainActivity")
+        val alias = ComponentName(context, "com.yunjx.app.MainActivityIcon2")
         if (variant == 1) {
             pm.setComponentEnabledSetting(alias, PackageManager.COMPONENT_ENABLED_STATE_ENABLED, PackageManager.DONT_KILL_APP)
             pm.setComponentEnabledSetting(main, PackageManager.COMPONENT_ENABLED_STATE_DISABLED, PackageManager.DONT_KILL_APP)

@@ -197,7 +197,7 @@ fun XunleiLoginScreen(
                             // 用与登录请求一致的设备签名（deviceSign = div101.xxx）：
                             // 验证页会把 URL 里的 deviceid 原样当 devicesign 用，
                             // 必须与 v3/login 的 devicesign 字段一致，否则报"登录信息已过期"
-                            onVerify(step.reviewUrl, com.yunx.app.data.network.XunleiDeviceFingerprint.deviceSign())
+                            onVerify(step.reviewUrl, com.yunjx.app.data.network.XunleiDeviceFingerprint.deviceSign())
                         },
                         modifier = Modifier.align(Alignment.CenterHorizontally)
                     ) {

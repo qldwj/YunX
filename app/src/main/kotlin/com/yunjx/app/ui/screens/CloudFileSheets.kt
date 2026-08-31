@@ -587,7 +587,7 @@ private fun DeleteStep(
 /** 分享结果：链接 + 提取码 + 复制 */
 @Composable
 internal fun ShareResultDialog(
-    info: com.yunx.app.data.network.model.ShareInfo,
+    info: com.yunjx.app.data.network.model.ShareInfo,
     onDismiss: () -> Unit
 ) {
     val context = LocalContext.current

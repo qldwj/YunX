@@ -99,7 +99,7 @@ class DownloadService : Service() {
     companion object {
         private const val CHANNEL_ID = "yunx_download"
         private const val NOTIFICATION_ID = 1001
-        private const val ACTION_STOP = "com.yunx.app.action.STOP_DOWNLOAD"
+        private const val ACTION_STOP = "com.yunjx.app.action.STOP_DOWNLOAD"
         private const val EXTRA_TITLE = "title"
         private const val EXTRA_PROGRESS = "progress"
         private const val EXTRA_SPEED = "speed"
