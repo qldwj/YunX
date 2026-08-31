@@ -561,13 +561,13 @@ class ResolveViewModel(
                 if (proxyResult.success && proxyResult.downloadUrl.isNotBlank()) {
                     // 代理解析成功：直接开始下载
                     downloadLink = DownloadLink(
-                        fileName = proxyResult.targetUrl.substringAfterLast("/").substringBefore("?"),
-                        fileSize = 0,
+                        filename = proxyResult.targetUrl.substringAfterLast("/").substringBefore("?"),
+                        size = 0,
                         downloadUrl = proxyResult.downloadUrl,
                         platform = DownloadPlatform.DIRECT
                     )
                     uiState = ResolveUiState.Success(
-                        fileName = downloadLink?.fileName ?: "未知文件",
+                        fileName = downloadLink?.filename ?: "未知文件",
                         fileSize = 0,
                         fileList = emptyList()
                     )
