@@ -46,6 +46,7 @@ sealed interface ResolveUiState {
     data object Loading : ResolveUiState
     data class Detail(val session: ShareSession, val files: List<ShareFile>) : ResolveUiState
     data class Error(val message: String) : ResolveUiState
+    data class Success(val fileName: String, val fileSize: Long, val fileList: List<ShareFile>) : ResolveUiState
 }
 
 /**
